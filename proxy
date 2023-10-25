@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# clash Linux安装教程：https://zhuanlan.zhihu.com/p/656652205
+# 1. 下载clash for linux到/root/local/clash
+# 2. 创建软连接ln -s clash.xxxx clash
+# 3. 先执行一次clash
+# 4. 下载订阅wget -O ~/.config/clash/config.yaml <clash_订阅地址> --no-check-certificate
+# 5. 执行此脚本:. ./proxy
+
+if [ $# -lt 1  ];then
+	/root/local/clash/clash  > /var/log/clash.log &
+	export http_proxy=http://127.0.0.1:7890/
+	export https_proxy=http://127.0.0.1:7890/
+	echo "http_proxy=$http_proxy"
+	echo "https_proxy=$https_proxy"
+	ps -ef | grep clash | grep -v grep
+else
+	killall clash
+	unset http_proxy
+	unset https_proxy
+	echo "unset proxy"
+	ps -ef | grep clash | grep -v grep
+fi
