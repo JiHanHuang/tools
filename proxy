@@ -15,7 +15,7 @@ if [ $# -lt 1  ];then
 	echo "https_proxy=$https_proxy"
 	ps -ef | grep clash | grep -v grep
 else
-	killall clash
+	kill `pidof clash`
 	unset http_proxy
 	unset https_proxy
 	echo "unset proxy"

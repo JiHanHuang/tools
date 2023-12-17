@@ -1,0 +1,3 @@
+
+GOPATH=/root/local/go/bin
+export PATH=${PATH}:${GOPATH}
