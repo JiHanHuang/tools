@@ -1,7 +1,7 @@
 # https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 
 # 语言: None, Cpp, Java, JavaScript, ObjC, Proto, TableGen, TextProto
-Language: Cpp
+Language: Cpp, C
 # BasedOnStyle:	LLVM
 
 # 访问说明符(public、private等)的偏移
