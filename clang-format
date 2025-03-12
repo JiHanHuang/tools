@@ -1,3 +1,6 @@
+#官方文档：https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+#中文说明：https://blog.csdn.net/chongbin007/article/details/125173376
+
 #移除哪些没用的玩意儿，都用默认的LLVM
 BasedOnStyle: LLVM
 #缩进宽度
@@ -6,3 +9,5 @@ IndentWidth: 4
 BreakBeforeTernaryOperators: false
 # 允许重新排版注释
 ReflowComments: false
+# 禁止重排头文件
+SortIncludes: Never
